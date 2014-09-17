@@ -1,0 +1,61 @@
+.puzz-game {
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+}
+
+
+.puzz-game  > .wrapper{
+    border: 1px solid black;
+    margin: 3px;
+    padding: 3px;
+    height: auto;
+    width: auto;
+    display:inline-block;
+}
+.puzz-game .canvas{
+    padding:0px;
+    margin:0px;
+    overflow: hidden;
+    background-color: #000000;
+    z-index: 0;
+}
+
+
+.puzz-game  .canvas .cell {
+    height: 30px;
+    width: 30px;
+    margin: 3px;
+    border:1px solid  wheat;
+    float: left;
+    list-style: none;
+    line-height: 30px;
+    z-index: 3000;
+
+}
+
+.puzz-game  .canvas .cell.red{
+    background-color: red;
+}
+
+.puzz-game  .canvas .cell.blue{
+    background-color: blue;
+}
+
+.puzz-game  .canvas .cell.green{
+    background-color: green;
+}
+
+.puzz-game  .canvas .cell.yellow{
+    background-color: yellow;
+}
+.puzz-game  .canvas .cell.orange{
+    background-color: orange;
+}
+.puzz-game  .canvas .cell.pink{
+    background-color: pink;
+}
+
+.puzz-game  .canvas .cell.blank{
+    background-color: white;
+}
