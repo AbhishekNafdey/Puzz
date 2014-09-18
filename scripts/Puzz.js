@@ -43,19 +43,21 @@
             this.cells[i] = [];
 
             for (var j = 0; j <= this.rowCount; j++) {
-                $("<li>").addClass("cell").addClass(this.colors[i]).html(temp).appendTo(this.canvas);
+                var cell = $("<li>").addClass("cell").addClass(this.colors[i]).html(temp);
+                cell[0].cellNumber = [i,j];
+               cell.appendTo(this.canvas);
                 temp++;
                this.cells[i][j] = cell;
             }
         }
-        this.allCells =   this.canvas.find(".cell");
-        $(this.allCells[0]).removeClass("red").addClass("blank");
+
+        $(this.cells[0][0]).removeClass("red").addClass("blank");
         this.canvas.css({"width":(38 * (1+this.rowCount))+"px"});
 
     };
 
     Puzz.prototype.Shuffle = function(){
-        this.intervalHolder = setInterval($.proxy(this.Exchange,this),1000);
+        this.intervalHolder = setInterval($.proxy(this.Exchange,this),1500);
     }
 
     Puzz.prototype.StopShuffle = function(){
@@ -63,30 +65,43 @@
     }
 
     Puzz.prototype.Exchange = function(){
-    var blankCell = $(".blank");
-    var blankIndex = this.allCells.index(blankCell);
+    var blankCellIndex = $(".blank")[0].cellNumber;
     
-    var sideCell =  this.getCell(this.sides[Math.floor(Math.random() * 4)],blankIndex);
+    var sideCell =  this.getCell(this.sides[Math.floor(Math.random() * 4)],blankCellIndex);
 
         if(sideCell.length > 0){
             var tempClass = sideCell.attr('class').split(' ').slice(-1)[0];
             sideCell.removeClass(tempClass).addClass("blank");
-            blankCell.removeClass("blank").addClass(tempClass);
+            this.cells[blankCellIndex[0]][blankCellIndex[1]].removeClass("blank").addClass(tempClass);
         }
     };
 
-    Puzz.prototype.getCell = function(side,currentCell){
+    Puzz.prototype.getCell = function(side,AR){
+
 
         switch(side){
             case "left":
-                return $(this.allCells[currentCell-1]);
+                if(AR[1] != 0){
+                    return $(this.cells[AR[0]][AR[1]-1]);
+                }else{return $("fakeDiv")}
             case "top":
-                return $(this.allCells[(currentCell - this.rowCount)-1]);
+                if(AR[0] != 0){
+                    return $(this.cells[AR[0]-1][AR[1]]);
+                }else{return $("fakeDiv")}
+
             case "right":
-                return $(this.allCells[currentCell+1]);
+                if(AR[1] != this.rowCount){
+                    return $(this.cells[AR[0]][AR[1]+1]);
+                }else{return $("fakeDiv")}
+
             case "bottom":
-                return $(this.allCells[1+ (currentCell + this.rowCount)]);
+                if(AR[0] != this.rowCount){
+                    return $(this.cells[AR[0]+1][AR[1]]);
+                }else{return $("fakeDiv")}
+
         }
+
+
 
     }
 

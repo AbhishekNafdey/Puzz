@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="20e8aac3-3840-419b-b24f-3b6211e6fd17" name="Default" comment="" />
+    <list default="true" id="20e8aac3-3840-419b-b24f-3b6211e6fd17" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/Puzz.js" afterPath="$PROJECT_DIR$/scripts/Puzz.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Puzz.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +29,8 @@
       <file leaf-file-name="Puzz.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Puzz.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="64" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="476">
+            <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="420">
+              <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -35,7 +39,8 @@
       <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="27" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="434" max-vertical-offset="1122">
+            <state vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="990">
+              <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -44,7 +49,8 @@
       <file leaf-file-name="Puzz.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/Puzz.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="7" selection-start="2038" selection-end="2038" vertical-scroll-proportion="1.943686" vertical-offset="0" max-vertical-offset="1751">
+            <state vertical-scroll-proportion="0.3895349" vertical-offset="842" max-vertical-offset="1770">
+              <caret line="74" column="58" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
               <folding />
             </state>
           </provider>
@@ -70,10 +76,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1" />
-    <option name="y" value="1" />
-    <option name="width" value="1369" />
-    <option name="height" value="720" />
+    <option name="y" value="22" />
+    <option name="width" value="1440" />
+    <option name="height" value="811" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -89,7 +94,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -120,6 +125,14 @@
     <property name="FullScreen" value="false" />
   </component>
   <component name="RunManager">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <option name="VMOptions" />
+      <option name="arguments" />
+      <option name="filePath" />
+      <option name="scope" value="ALL" />
+      <option name="testName" />
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <option name="VMOptions" />
       <option name="arguments" />
@@ -130,30 +143,21 @@
       <option name="showConsoleOnStdOut" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <option name="VMOptions" />
-      <option name="arguments" />
-      <option name="filePath" />
-      <option name="scope" value="ALL" />
-      <option name="testName" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" singleton="true" config-file="">
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
       <setting name="configLocationType" value="CONFIG_FILE" />
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
-      <setting name="preferredDebugBrowser" value="CHROME" />
+      <setting name="preferredDebugBrowser" value="Chrome" />
       <method />
     </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="">
-      <browser start="false" url="" with-js-debugger="false" />
       <method />
     </configuration>
     <list size="0" />
@@ -168,14 +172,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="1" width="1369" height="720" extended-state="0" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1440" height="811" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24981523" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24930556" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -183,15 +187,18 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USERS">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
       <collection />
     </option>
   </component>
@@ -209,151 +216,168 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Puzz.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="64" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="27" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="434" max-vertical-offset="1122">
+        <state vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="990">
+          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/Puzz.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="7" selection-start="2038" selection-end="2038" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1751">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1005" max-vertical-offset="1545">
+          <caret line="67" column="4" selection-start-line="67" selection-start-column="4" selection-end-line="67" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Puzz.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="18" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
+          <caret line="15" column="64" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TicTacToe-master/scripts/TTTApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="28" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="2567" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="27" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="434" max-vertical-offset="1122">
+        <state vertical-scroll-proportion="0.0" vertical-offset="434" max-vertical-offset="1122">
+          <caret line="55" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/Puzz.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="26" selection-start="2663" selection-end="2663" vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1802">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1751">
+          <caret line="67" column="7" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Puzz.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="18" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="17" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TicTacToe-master/scripts/TTTApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="28" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="2567" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="28" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0" vertical-offset="366" max-vertical-offset="1020">
+        <state vertical-scroll-proportion="0.0" vertical-offset="434" max-vertical-offset="1122">
+          <caret line="55" column="27" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/Puzz.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="71" selection-start="1636" selection-end="1636" vertical-scroll-proportion="0.0" vertical-offset="706" max-vertical-offset="1768">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1003" max-vertical-offset="1802">
+          <caret line="87" column="26" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Puzz.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="64" selection-start="614" selection-end="625" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="459">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="17" column="18" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TicTacToe-master/scripts/TTTApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="28" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2567" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="28" selection-start="867" selection-end="867" vertical-scroll-proportion="0.0" vertical-offset="366" max-vertical-offset="1020">
+        <state vertical-scroll-proportion="0.0" vertical-offset="366" max-vertical-offset="1020">
+          <caret line="53" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/Puzz.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="6" selection-start="1795" selection-end="1795" vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1581">
+        <state vertical-scroll-proportion="0.0" vertical-offset="706" max-vertical-offset="1768">
+          <caret line="54" column="71" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Puzz.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="57" selection-start="396" selection-end="404" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="425">
+        <state vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="459">
+          <caret line="14" column="64" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../TicTacToe-master/scripts/TTTApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="28" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2567" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="10" selection-start="319" selection-end="319" vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="646">
+        <state vertical-scroll-proportion="0.0" vertical-offset="366" max-vertical-offset="1020">
+          <caret line="53" column="28" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/Puzz.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="40" selection-start="764" selection-end="764" vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="918">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../TicTacToe-master/scripts/TTTApp.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="28" selection-start="1163" selection-end="1163" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2567" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styles/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="27" selection-start="930" selection-end="930" vertical-scroll-proportion="0.0" vertical-offset="434" max-vertical-offset="1122">
+        <state vertical-scroll-proportion="0.0" vertical-offset="544" max-vertical-offset="1581">
+          <caret line="63" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Puzz.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="64" selection-start="727" selection-end="727" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="476">
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="425">
+          <caret line="11" column="57" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="646">
+          <caret line="22" column="10" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/Puzz.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="7" selection-start="2038" selection-end="2038" vertical-scroll-proportion="1.943686" vertical-offset="0" max-vertical-offset="1751">
+        <state vertical-scroll-proportion="0.0" vertical-offset="111" max-vertical-offset="918">
+          <caret line="34" column="40" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="825" max-vertical-offset="990">
+          <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Puzz.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="225" max-vertical-offset="420">
+          <caret line="15" column="64" selection-start-line="15" selection-start-column="64" selection-end-line="15" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/Puzz.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3895349" vertical-offset="842" max-vertical-offset="1770">
+          <caret line="74" column="58" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="58" />
           <folding />
         </state>
       </provider>
