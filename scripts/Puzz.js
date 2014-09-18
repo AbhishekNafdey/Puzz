@@ -10,11 +10,13 @@
         this.startButton = $("#start");
         this.stopButton = $("#stopShuffle");
         this.shuffleButton = $("#shuffle");
+        this.undoButton = $("#undoShuffle");
         this.rowCountField = $("#rowCount");
         this.allCells = "";
 
         this.rowCount = 0;
         this.cells = [];
+        this.undoArray =[];
         this.intervalHolder = null;
         this.colors = ["red","blue","green" ,"yellow","orange","pink"];
         this.sides = ["left","top","right","bottom"]
@@ -31,6 +33,7 @@
     this.startButton.on("click" , $.proxy(this.drawBoard,this));
     this.shuffleButton.on("click" , $.proxy(this.Shuffle,this));
     this.stopButton.on("click" , $.proxy(this.StopShuffle,this));
+    this.undoButton.on("click" , $.proxy(this.UndoShuffle,this));
     }
 
     Puzz.prototype.drawBoard = function(){
@@ -45,7 +48,7 @@
               //  this.cells[i][j] = cell;
             }
         }
-         this.allCells =   this.canvas.find(".cell");
+        this.allCells =   this.canvas.find(".cell");
         $(this.allCells[0]).removeClass("red").addClass("blank");
         this.canvas.css({"width":(38 *this.rowCount)+"px"});
 
@@ -61,16 +64,15 @@
 
     Puzz.prototype.Exchange = function(){
     var blankCell = $(".blank");
-    var tempSide = this.sides[Math.floor(Math.random() * 4)];
-    var sideCell =  this.getCell(tempSide,this.allCells.index(blankCell));
+    var blankIndex = this.allCells.index(blankCell);
+    var
+    var sideCell =  this.getCell(this.sides[Math.floor(Math.random() * 4)],blankIndex);
 
-    if(sideCell.length > 0){
-        var tempClass = sideCell.attr('class').split(' ').slice(-1)[0];
-        sideCell.removeClass(tempClass).addClass("blank");
-        blankCell.removeClass("blank").addClass(tempClass);
-    }
-
-
+        if(sideCell.length > 0){
+            var tempClass = sideCell.attr('class').split(' ').slice(-1)[0];
+            sideCell.removeClass(tempClass).addClass("blank");
+            blankCell.removeClass("blank").addClass(tempClass);
+        }
     };
 
     Puzz.prototype.getCell = function(side,currentCell){
@@ -84,8 +86,6 @@
                 return $(this.allCells[currentCell+1]);
             case "bottom":
                 return $(this.allCells[currentCell + (this.rowCount-1)]);
-
-
         }
 
     }
