@@ -36,6 +36,29 @@
     this.undoButton.on("click" , $.proxy(this.UndoShuffle,this));
     }
 
+    Puzz.prototype.UndoShuffle = function(){
+
+        for(var i = this.undoArray.length ;i > 0;i-- ){
+            var curr = this.undoArray[i-1];
+            var prev = this.undoArray[i-2];
+            var self= this;
+            if(i !=1){
+                (function(p,j,s){
+                    setTimeout(function(){
+                        console.log(s.cells);
+                        $.proxy(s.ToggleClasses(p,$(s.cells[j[0]][j[1]])),s);
+                    },700);
+                })(curr,prev,self)
+
+
+            }
+
+
+        }
+
+
+    }
+
     Puzz.prototype.drawBoard = function(){
         this.rowCount = this.rowCountField.val() -1;
            var temp = 0;
@@ -45,7 +68,7 @@
             for (var j = 0; j <= this.rowCount; j++) {
                 var cell = $("<li>").addClass("cell").addClass(this.colors[i]).html(temp);
                 cell[0].cellNumber = [i,j];
-               cell.appendTo(this.canvas);
+                cell.appendTo(this.canvas);
                 temp++;
                this.cells[i][j] = cell;
             }
@@ -57,7 +80,7 @@
     };
 
     Puzz.prototype.Shuffle = function(){
-        this.intervalHolder = setInterval($.proxy(this.Exchange,this),1500);
+        this.intervalHolder = setInterval($.proxy(this.Exchange,this),100);
     }
 
     Puzz.prototype.StopShuffle = function(){
@@ -66,18 +89,23 @@
 
     Puzz.prototype.Exchange = function(){
     var blankCellIndex = $(".blank")[0].cellNumber;
+
     
     var sideCell =  this.getCell(this.sides[Math.floor(Math.random() * 4)],blankCellIndex);
 
         if(sideCell.length > 0){
-            var tempClass = sideCell.attr('class').split(' ').slice(-1)[0];
-            sideCell.removeClass(tempClass).addClass("blank");
-            this.cells[blankCellIndex[0]][blankCellIndex[1]].removeClass("blank").addClass(tempClass);
+          this.ToggleClasses(blankCellIndex,sideCell);
+            this.undoArray.push(blankCellIndex);
         }
     };
 
-    Puzz.prototype.getCell = function(side,AR){
+    Puzz.prototype.ToggleClasses = function(curr,next){
+        var tempClass = next.attr('class').split(' ').slice(-1)[0];
+        next.removeClass(tempClass).addClass("blank");
+        this.cells[ curr[0] ] [ curr[1] ].removeClass("blank").addClass(tempClass);
+    };
 
+    Puzz.prototype.getCell = function(side,AR){
 
         switch(side){
             case "left":
