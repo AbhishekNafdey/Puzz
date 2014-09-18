@@ -37,25 +37,25 @@
     }
 
     Puzz.prototype.drawBoard = function(){
-        this.rowCount = this.rowCountField.val();
+        this.rowCount = this.rowCountField.val() -1;
            var temp = 0;
-        for (var i = 0; i < this.rowCount; i += 1) {
+        for (var i = 0; i <= this.rowCount; i++) {
             this.cells[i] = [];
 
-            for (var j = 0; j < this.rowCount; j += 1) {
+            for (var j = 0; j <= this.rowCount; j++) {
                 $("<li>").addClass("cell").addClass(this.colors[i]).html(temp).appendTo(this.canvas);
                 temp++;
-              //  this.cells[i][j] = cell;
+               this.cells[i][j] = cell;
             }
         }
         this.allCells =   this.canvas.find(".cell");
         $(this.allCells[0]).removeClass("red").addClass("blank");
-        this.canvas.css({"width":(38 *this.rowCount)+"px"});
+        this.canvas.css({"width":(38 * (1+this.rowCount))+"px"});
 
     };
 
     Puzz.prototype.Shuffle = function(){
-        this.intervalHolder = setInterval($.proxy(this.Exchange,this),50);
+        this.intervalHolder = setInterval($.proxy(this.Exchange,this),1000);
     }
 
     Puzz.prototype.StopShuffle = function(){
@@ -65,7 +65,7 @@
     Puzz.prototype.Exchange = function(){
     var blankCell = $(".blank");
     var blankIndex = this.allCells.index(blankCell);
-    var
+    
     var sideCell =  this.getCell(this.sides[Math.floor(Math.random() * 4)],blankIndex);
 
         if(sideCell.length > 0){
@@ -81,11 +81,11 @@
             case "left":
                 return $(this.allCells[currentCell-1]);
             case "top":
-                return $(this.allCells[currentCell - (this.rowCount-1)]);
+                return $(this.allCells[(currentCell - this.rowCount)-1]);
             case "right":
                 return $(this.allCells[currentCell+1]);
             case "bottom":
-                return $(this.allCells[currentCell + (this.rowCount-1)]);
+                return $(this.allCells[1+ (currentCell + this.rowCount)]);
         }
 
     }
