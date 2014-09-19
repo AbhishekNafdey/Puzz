@@ -18,7 +18,7 @@
         this.cells = [];
         this.undoArray =[];
         this.intervalHolder = null;
-        this.colors = ["red","blue","green" ,"yellow","orange","pink"];
+        this.colors = [];
         this.sides = ["left","top","right","bottom"]
         this.init();
 
@@ -29,6 +29,16 @@
       this.bindEvents();
     }
 
+    Puzz.prototype.getColors = function(){
+        var color = "#"+((1<<24)*Math.random()|0).toString(16);
+        if(this.colors.join("").toString().indexOf(color) == -1){
+            this.colors.push(color);
+            return color;
+        }else{
+            return  this.getColors();
+        }
+    }
+
     Puzz.prototype.bindEvents = function(){
     this.startButton.on("click" , $.proxy(this.drawBoard,this));
     this.shuffleButton.on("click" , $.proxy(this.Shuffle,this));
@@ -37,54 +47,55 @@
     }
 
     Puzz.prototype.UndoShuffle = function(){
-
-        for(var i = this.undoArray.length ;i > 0;i-- ){
-            var curr = this.undoArray[i-1];
-            var prev = this.undoArray[i-2];
+        this.clearInterval();
+            var curr = $(".blank")[0].cellNumber;
+            var prev = this.undoArray.pop();
             var self= this;
-            if(i !=1){
-                (function(p,j,s){
-                    setTimeout(function(){
-                        console.log(s.cells);
-                        $.proxy(s.ToggleClasses(p,$(s.cells[j[0]][j[1]])),s);
-                    },700);
-                })(curr,prev,self)
 
+            $.proxy(this.ToggleClasses(curr,$(this.cells[prev[0]][prev[1]])),this);
 
-            }
+            setTimeout(function(){
+                if(self.undoArray.length> 0){
+                    $.proxy( self.UndoShuffle(),self);
+                }
+            },50);
+    };
 
-
-        }
-
-
-    }
+    Puzz.prototype.clearInterval = function(){
+        window.clearInterval(this.intervalHolder);
+    };
 
     Puzz.prototype.drawBoard = function(){
+        this.canvas.html("");
         this.rowCount = this.rowCountField.val() -1;
-           var temp = 0;
+
         for (var i = 0; i <= this.rowCount; i++) {
             this.cells[i] = [];
-
+            var color = this.getColors();
             for (var j = 0; j <= this.rowCount; j++) {
-                var cell = $("<li>").addClass("cell").addClass(this.colors[i]).html(temp);
+                var cell = $("<li>")
+                    .addClass("cell")
+                    .css({"background-color":color});
+
                 cell[0].cellNumber = [i,j];
                 cell.appendTo(this.canvas);
-                temp++;
-               this.cells[i][j] = cell;
+                this.cells[i][j] = cell;
             }
         }
 
-        $(this.cells[0][0]).removeClass("red").addClass("blank");
+        $(this.cells[0][0]).removeClass("red").addClass("blank").css({"background-color":"#fff"});
         this.canvas.css({"width":(38 * (1+this.rowCount))+"px"});
 
     };
 
     Puzz.prototype.Shuffle = function(){
-        this.intervalHolder = setInterval($.proxy(this.Exchange,this),100);
+        this.clearInterval()
+        this.intervalHolder = setInterval($.proxy(this.Exchange,this),50);
     }
 
     Puzz.prototype.StopShuffle = function(){
-       window.clearInterval(this.intervalHolder);
+       this.clearInterval();
+      // this.undoArray.push($(".blank")[0].cellNumber);
     }
 
     Puzz.prototype.Exchange = function(){
@@ -96,13 +107,15 @@
         if(sideCell.length > 0){
           this.ToggleClasses(blankCellIndex,sideCell);
             this.undoArray.push(blankCellIndex);
+
         }
     };
 
     Puzz.prototype.ToggleClasses = function(curr,next){
-        var tempClass = next.attr('class').split(' ').slice(-1)[0];
-        next.removeClass(tempClass).addClass("blank");
-        this.cells[ curr[0] ] [ curr[1] ].removeClass("blank").addClass(tempClass);
+
+        var tempClass = next.attr('style').split(":").slice(-1)[0].split(";")[0];
+        next.css({"background-color":"white"}).addClass("blank");
+        this.cells[ curr[0] ] [ curr[1] ].css({"background-color":tempClass}).removeClass("blank");
     };
 
     Puzz.prototype.getCell = function(side,AR){
